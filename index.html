@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marathon Elevation Comparison</title>
+    <script type="module" src="/src/main.js"></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="hero">
+        <p class="eyebrow">Marathon course profiles</p>
+        <h1>Compare elevation across multiple race routes.</h1>
+        <p class="hero-copy">
+          Toggle any marathon below to overlay its GPX elevation trace on a shared chart.
+          The chart automatically scales its Y axis to the highest selected elevation.
+        </p>
+      </header>
+
+      <main class="layout">
+        <aside class="control-panel">
+          <div class="panel-header">
+            <h2>Races</h2>
+            <p>Select the courses to compare.</p>
+          </div>
+          <form id="race-form" class="race-form"></form>
+        </aside>
+
+        <section class="chart-panel">
+          <div class="chart-header">
+            <div>
+              <p class="eyebrow">Elevation</p>
+              <h2>Course comparison</h2>
+            </div>
+            <p id="chart-summary" class="chart-summary">Loading races...</p>
+          </div>
+          <div class="chart-frame">
+            <canvas id="elevation-chart"></canvas>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
